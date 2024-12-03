@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 128, 128, 0.9);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.navbar__menu li a {
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar__menu li a:hover {
+  color: #ff0000;
+}
