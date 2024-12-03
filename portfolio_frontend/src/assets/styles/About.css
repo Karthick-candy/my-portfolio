@@ -1,0 +1,181 @@
+/* About.css */
+.about-container {
+    background-color: #c6f7f2; /* Light background color */
+    color: #000000;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.about-header {
+    max-width: 900px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.about-header h1 {
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.about-description {
+    max-width: 900px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.about-description p {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.skills-section, .journey-section, .focus-section, .goals-section, .contact-section {
+    max-width: 900px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+.skills-section h2, .journey-section h2, .focus-section h2, .goals-section h2, .contact-section h2 {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.skills-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skills-section li {
+    font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.skills-section li::before {
+    content: "• ";
+    color: #00bfae;
+    font-weight: bold;
+}
+
+.skills-section a {
+    color: #00bfae;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.skills-section a:hover {
+    color: #ff6347;
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    font-size: 2rem;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff6347;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+    .about-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-description p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .skills-section h2,
+    .journey-section h2,
+    .focus-section h2,
+    .goals-section h2,
+    .contact-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .skills-section li {
+        font-size: 1rem;
+    }
+
+    .social-icons a {
+        font-size: 1.5rem;
+    }
+}
+
+/* Tablet Devices (481px to 768px) */
+@media (max-width: 768px) {
+    .about-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-description p {
+        font-size: 1.1rem;
+    }
+
+    .skills-section h2,
+    .journey-section h2,
+    .focus-section h2,
+    .goals-section h2,
+    .contact-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .skills-section li {
+        font-size: 1.1rem;
+    }
+
+    .social-icons a {
+        font-size: 1.8rem;
+    }
+}
+
+/* Desktop Devices (769px and above) */
+@media (min-width: 769px) {
+    .about-header h1 {
+        font-size: 3rem;
+    }
+
+    .about-description p {
+        font-size: 1.2rem;
+    }
+
+    .skills-section h2,
+    .journey-section h2,
+    .focus-section h2,
+    .goals-section h2,
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .skills-section li {
+        font-size: 1.1rem;
+    }
+
+    .social-icons a {
+        font-size: 2rem;
+    }
+}

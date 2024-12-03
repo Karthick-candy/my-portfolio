@@ -78,16 +78,7 @@
     border: 4px solid #00bfae; /* Matching border color */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
-  .hero__photo {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border: 4px solid #00bfae;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
+
   .social-icons {
     margin-top: 20px;
     display: flex;

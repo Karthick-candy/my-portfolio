@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/styles/Navbar.css";
-import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -8,29 +8,29 @@ const Navbar = () => {
       <h1 className="navbar__logo">Karthick's Portfolio</h1>
       <ul className="navbar__menu">
         <li>
-          <Link to="home" smooth duration={500}>
+          <NavLink to="/" smooth duration={500}>
             Home
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="about" smooth duration={500}>
+          <NavLink to="/about" smooth duration={500}>
             About
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="skills" smooth duration={500}>
+          <NavLink to="skills" smooth duration={500}>
             Skills
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="projects" smooth duration={500}>
+          <NavLink to="projects" smooth duration={500}>
             Projects
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="contact" smooth duration={500}>
+          <NavLink to="contact" smooth duration={500}>
             Contact
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>
