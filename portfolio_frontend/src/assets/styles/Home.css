@@ -1,51 +1,185 @@
+/* Home.css */
 .hero {
-    height: 100vh;
+    background-color: #c6f7f2; /* Light gray background for the hero section */
+    color: #000000;
+    height: auto;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    background: linear-gradient(135deg, #008080, #ffe0b2);
+    align-items: center;
     text-align: center;
-    color: white;
-    animation: fadeIn 2s ease-in-out;
+    /* padding-top: 40px; */
+  }
+  
+  .hero__content {
+    max-width: 900px;
+    padding: 20px;
+    box-sizing: border-box;
   }
   
   .hero__content h1 {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    margin-bottom: 20px;
   }
   
   .hero__content p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    margin-bottom: 40px;
+  }
+  
+  .hero__photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 20px 0;
+    object-fit: cover;
+    border: 4px solid #00bfae;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .hero__button {
-    padding: 0.8rem 2rem;
-    background: white;
-    color: #008080;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #00bfae;
+    color: white;
     border: none;
-    font-size: 1.2rem;
-    font-weight: bold;
+    border-radius: 30px;
     cursor: pointer;
-    border-radius: 50px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .hero__button:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: #ff6347;
   }
   
-  /* Fade-In Animation */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(50px);
+  .hero__button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Photo container for fallback in case of no image */
+  .hero__photo-container {
+    margin: 20px 0;
+  }
+  
+  .hero__photo-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 4px solid #00bfae; /* Matching border color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero__photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #00bfae;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-icons a {
+    font-size: 2rem;
+    color: #000000;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #ff6347;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* Mobile Devices (up to 480px) */
+  @media (max-width: 480px) {
+    .hero__content h1 {
+      font-size: 1.8rem;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+  
+    .hero__content p {
+      font-size: 1rem;
+      padding: 0 10px;
+    }
+  
+    .hero__photo {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .hero__button {
+      padding: 10px 25px;
+      font-size: 1rem;
+    }
+  
+    .social-icons a {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Tablet Devices (481px to 768px) */
+  @media (max-width: 768px) {
+    .hero__content h1 {
+      font-size: 2.2rem;
+    }
+  
+    .hero__content p {
+      font-size: 1.1rem;
+    }
+  
+    .hero__photo {
+      width: 140px;
+      height: 140px;
+    }
+  
+    .hero__button {
+      padding: 10px 28px;
+      font-size: 1rem;
+    }
+  
+    .social-icons a {
+      font-size: 1.8rem;
+    }
+  }
+  
+  /* Desktop Devices (769px and above) */
+  @media (min-width: 769px) {
+    .hero__content h1 {
+      font-size: 3rem;
+    }
+  
+    .hero__content p {
+      font-size: 1.2rem;
+    }
+  
+    .hero__photo {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .hero__button {
+      padding: 12px 30px;
+      font-size: 1.1rem;
+    }
+  
+    .social-icons a {
+      font-size: 2rem;
     }
   }
   
