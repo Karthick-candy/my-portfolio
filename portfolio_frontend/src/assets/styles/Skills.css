@@ -1,10 +1,13 @@
+/* Root variables for gradients and colors */
 :root {
     --gradient-primary: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
     --gradient-secondary: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
     --text-glow-color: rgba(37, 117, 252, 0.6);
     --background-gradient: linear-gradient(160deg, #f4f4f4 0%, #e0e0e0 100%);
+    --glow-color: rgba(255, 255, 255, 0.3);
   }
   
+  /* Main container styles */
   .skills-container-enhanced {
     min-height: 100vh;
     display: flex;
@@ -12,11 +15,12 @@
     justify-content: center;
     background: var(--background-gradient);
     font-family: 'Inter', sans-serif;
-    padding: 2rem; /* Reduced padding */
+    padding: 4rem;
     overflow: hidden;
     position: relative;
   }
   
+  /* Content styles */
   .skills-content-enhanced {
     max-width: 1200px;
     margin: 0 auto;
@@ -27,11 +31,11 @@
   
   .skills-header-enhanced {
     text-align: center;
-    margin-bottom: 2rem; /* Reduced margin */
+    margin-bottom: 2rem;
   }
   
   .skills-header-enhanced h1 {
-    font-size: 3rem; /* Reduced from 4rem */
+    font-size: 3rem;
     font-weight: 900;
     margin-bottom: 0.5rem;
     color: #1a1a2e;
@@ -39,86 +43,115 @@
   }
   
   .skills-header-enhanced .subtitle-enhanced {
-    font-size: 1.2rem; /* Reduced from 1.6rem */
+    font-size: 1.2rem;
     color: #4a4a68;
     opacity: 0.8;
   }
   
   .skills-description-enhanced {
     text-align: center;
-    max-width: 800px; /* Reduced from 900px */
-    margin: 0 auto 2rem; /* Reduced margin */
-    font-size: 1.1rem; /* Reduced from 1.3rem */
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     color: #333;
     letter-spacing: 0.5px;
   }
   
+  /* Grid layout */
   .skills-grid-enhanced {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem; /* Reduced from 2rem */
+    gap: 1.5rem;
   }
   
+  /* Card styles with glowing effect */
   .skill-category-enhanced {
-    border-radius: 15px; /* Slightly reduced */
-    padding: 1.8rem; /* Reduced from 2.5rem */
+    border-radius: 15px;
+    padding: 1.8rem;
     text-align: center;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12); /* Slightly softer shadow */
+    position: relative;
+    transition: all 0.4s ease;
+    background: var(--gradient-primary);
     color: white;
-    transform-style: preserve-3d;
-    perspective: 1000px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: glowing 5s infinite;
   }
   
+  .skill-category-enhanced::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--glow-color);
+    filter: blur(15px);
+    z-index: -1;
+    opacity: 1;
+  }
+  
+  /* Icon container */
   .skill-icon-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem; /* Reduced from 1.5rem */
+    margin-bottom: 1rem;
   }
   
   .skill-icon-enhanced {
-    font-size: 2.5rem; /* Reduced from 3.5rem */
+    font-size: 2.5rem;
     color: white;
     filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.2));
   }
   
+  /* Card heading */
   .skill-category-enhanced h3 {
-    margin-bottom: 1rem; /* Reduced from 1.5rem */
-    font-size: 1.2rem; /* Reduced from 1.5rem */
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
   
+  /* List inside the card */
   .skill-category-list-enhanced {
     list-style: none;
     padding: 0;
   }
   
   .skill-category-list-enhanced li {
-    margin: 0.5rem 0; /* Reduced from 0.8rem */
+    margin: 0.5rem 0;
     opacity: 0.9;
-    font-size: 0.9rem; /* Reduced from 1.1rem */
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
   }
   
+  .skill-category-list-enhanced li:hover {
+    color: #fff;
+    text-shadow: 0 0 8px var(--text-glow-color), 0 0 15px var(--text-glow-color);
+  }
+  
+  /* Footer section */
   .skills-footer-enhanced {
     text-align: center;
-    margin-top: 2.5rem; /* Reduced from 4rem */
+    margin-top: 2.5rem;
   }
   
   .skills-quote-enhanced {
-    max-width: 800px; /* Reduced from 900px */
-    margin: 0 auto 2rem; /* Reduced from 2.5rem */
+    max-width: 800px;
+    margin: 0 auto 2rem;
     font-style: italic;
-    font-size: 1.2rem; /* Reduced from 1.4rem */
+    font-size: 1.2rem;
     color: #2c3e50;
     line-height: 1.7;
   }
   
+  /* Button styles */
   .github-link-enhanced {
     display: inline-block;
-    padding: 12px 35px; /* Reduced from 15px 40px */
+    padding: 12px 35px;
     background: var(--gradient-primary);
     color: white;
     text-decoration: none;
@@ -127,10 +160,35 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: all 0.4s ease;
-    font-size: 0.9rem; /* Added to reduce text size */
+    font-size: 0.9rem;
     box-shadow: 0 12px 25px rgba(106, 17, 203, 0.3);
   }
   
+  .github-link-enhanced:hover {
+    box-shadow: 0 20px 40px rgba(106, 17, 203, 0.4);
+    transform: scale(1.1);
+  }
+  
+  /* Animation for glowing effect */
+  @keyframes glowing {
+    0% {
+      box-shadow: 0 0 4px #ff6a00, 0 0 8px #ff6a00, 0 0 12px #ff6a00;
+    }
+    25% {
+      box-shadow: 0 0 4px #2575fc, 0 0 8px #2575fc, 0 0 12px #2575fc;
+    }
+    50% {
+      box-shadow: 0 0 4px #ee0979, 0 0 8px #ee0979, 0 0 12px #ee0979;
+    }
+    75% {
+      box-shadow: 0 0 4px #6a11cb, 0 0 8px #6a11cb, 0 0 12px #6a11cb;
+    }
+    100% {
+      box-shadow: 0 0 4px #ff6a00, 0 0 8px #ff6a00, 0 0 12px #ff6a00;
+    }
+  }
+  
+  /* Responsive adjustments */
   @media (max-width: 1200px) {
     .skills-grid-enhanced {
       grid-template-columns: repeat(2, 1fr);
@@ -139,15 +197,16 @@
   
   @media (max-width: 768px) {
     .skills-container-enhanced {
-      padding: 1rem; /* Reduced from 2rem */
+      padding: 1rem;
     }
   
     .skills-header-enhanced h1 {
-      font-size: 2.5rem; /* Reduced from 3rem */
+      font-size: 2.5rem;
     }
   
     .skills-grid-enhanced {
       grid-template-columns: 1fr;
-      gap: 1rem; /* Reduced gap */
+      gap: 1rem;
     }
   }
+  
